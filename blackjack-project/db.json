@@ -1,0 +1,86 @@
+{
+  "cards": [
+  {
+     "id":1,
+     "value": 3,
+     "name": "3 of clubs",
+     "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/925/3C__99122.1440113509.1280.1280.png?c=2"
+     
+  },
+  {
+      "id":2,
+      "value": 4,
+      "name": "4 of hearts",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/926/4H__83243.1440113515.1280.1280.png?c=2"
+      
+   },
+   {
+      "id":3,
+      "value": 5,
+      "name": "5 of spades",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/927/5S__90574.1440113521.1280.1280.png?c=2"
+      
+   },{
+      "id":4,
+      "value": 6,
+      "name": "6 of diamonds",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/928/6D__92916.1440113530.1280.1280.png?c=2"
+      
+   },{
+      "id":5,
+      "value": 7,
+      "name": "7 of clubs",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/929/7C__93490.1440113539.1280.1280.png?c=2"
+      
+   },{
+      "id":6,
+      "value": 8,
+      "name": "8 of spades",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/930/8S__27839.1440113555.1280.1280.png?c=2"
+      
+   },{
+      "id":7,
+      "value": 9,
+      "name": "9 of diamonds",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/931/9D__67286.1440113561.1280.1280.png?c=2"
+      
+   },{
+      "id":8,
+      "value": 10,
+      "name": "10 of hearts",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/932/10H__11470.1440113568.1280.1280.png?c=2"
+      
+   },{
+      "id":9,
+      "value": 10,
+      "name": "jack of clubs",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/923/JC__86231.1440113428.1280.1280.png?c=2"
+      
+   },{
+      "id":10,
+      "value": 10,
+      "name": "queen of diamonds",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/934/QD__14920.1440113588.1280.1280.png?c=2"
+      
+   },{
+      "id":11,
+      "value": 10,
+      "name": "king of hearts",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/933/KH__01216.1440113580.1280.1280.png?c=2"
+      
+   },{
+      "id":12,
+      "value": [1, 11],
+      "name": "Ace of spades",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/935/AS__68652.1440113599.1280.1280.png?c=2"
+      
+   },
+   {
+   "id":13,
+      "value": 2,
+      "name": "2 of diamonds",
+      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/924/2D__57497.1440113502.1280.1280.png?c=2"
+  }   
+]
+}
+
