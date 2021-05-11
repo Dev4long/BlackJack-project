@@ -47,9 +47,13 @@ export default class TestTable extends React.Component{
             <div>
                 <button onClick = {() => this.gameOn()}>Deal</button>
                 <Dealer dCard1 = {this.state.dealerCard1[randomIndex1]} gameOn = {this.state.gameOn} dCard2 = {this.state.dealerCard2[randomIndex2]}/>
+                <br></br>
+                <br></br>
                 <Player pCard1 = {this.state.playerCard1[randomIndex3]} gameOn = {this.state.gameOn} pCard2 = {this.state.playerCard2[randomIndex4]}/>
                 
             </div>
         )
     }
 }
+
+

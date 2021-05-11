@@ -8,7 +8,7 @@ export default class DCard1 extends React.Component{
         return (
             <div>   
                 <Card>
-                <Image size = "mini" src= {this.props.gameOn === false ? "http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg": 
+                      <Image size = "mini" src= {this.props.gameOn === false ? "http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg": 
                     this.props.card1.image} wrapped ui={false} />        
                 </Card>
             </div>

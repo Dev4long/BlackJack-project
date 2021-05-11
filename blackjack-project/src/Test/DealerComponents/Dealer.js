@@ -6,8 +6,12 @@ import { Grid } from 'semantic-ui-react'
 
 export default class Dealer extends React.Component {
     
-    
+
     render() {
+    
+        let dValue = this.props.dCard1.value + this.props.dCard2.value
+        console.log(dValue)
+        
         return (
 
             <div>
