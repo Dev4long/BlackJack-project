@@ -13,8 +13,8 @@ export default class Dealer extends React.Component {
 
     shuffleOn = () => {
         this.setState({
-            card1: this.props.card,
-            card2: this.props.card2
+            card1: this.props.dCard,
+            card2: this.props.dCard2
         })
     }
     

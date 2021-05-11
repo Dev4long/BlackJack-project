@@ -11,10 +11,10 @@ export default class Player extends React.Component {
         card2: ""
     }
 
-    shuffleOn = () => {
+    shuffleOn2 = () => {
         this.setState({
-            card1: this.props.card,
-            card2: this.props.card2
+            card1: this.props.pCard,
+            card2: this.props.pCard2
         })
     }
     
@@ -25,14 +25,14 @@ export default class Player extends React.Component {
                 <h2>Your Hand</h2>
                 <Grid relaxed columns={2}>
                     <Grid.Column>
-                        <PCard1 card2 = {this.state.card2} gameOn = {this.props.gameOn}/>
+                        <PCard1 card1 = {this.state.card1} gameOn = {this.props.gameOn}/>
                     </Grid.Column>
                   
                     <Grid.Column>
                         <PCard2 card2 = {this.state.card2} gameOn = {this.props.gameOn}/>
                     </Grid.Column>
                 </Grid>
-                <button onClick = {() => this.shuffleOn()}>shuffle</button>
+                <button onClick = {() => this.shuffleOn2()}>shuffle</button>
             </div>
         )
     }

@@ -37,8 +37,8 @@ export default class TestTable extends React.Component{
         let randomIndex4 = Math.floor(Math.random() * 13)
         return (
             <div>
-                <Dealer card = {this.state.cards[randomIndex1]} gameOn = {this.state.gameOn} card2 = {this.state.cards[randomIndex2]}/>
-                <Player card = {this.state.cards[randomIndex3]} gameOn = {this.state.gameOn} card2 = {this.state.cards[randomIndex4]}/>
+                <Dealer dCard = {this.state.cards[randomIndex1]} gameOn = {this.state.gameOn} dCard2 = {this.state.cards[randomIndex2]}/>
+                <Player pCard = {this.state.cards[randomIndex3]} gameOn = {this.state.gameOn} pCard2 = {this.state.cards[randomIndex4]}/>
                 <button onClick = {() => this.gameOn()}>Deal</button>
             </div>
         )
