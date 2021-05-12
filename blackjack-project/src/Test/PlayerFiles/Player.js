@@ -14,9 +14,10 @@ export default class Player extends React.Component {
             <div>
                 <br></br>
                 <br></br>
-                {this.props.dealerTurn === false? <Header textAlign = "center" color = "blue" as = 'h1'>Your Hand</Header> 
-                : <Header textAlign = "center" color = "red" as = 'h1'>Player Stays</Header>}
-                <h2></h2>
+                {this.props.dealerTurn === false? <Header textAlign = "center" color = "blue" as = 'h1'>Your Hand: {this.props.score}</Header> 
+                : <Header textAlign = "center" color = "red" as = 'h1'></Header>}
+       
+                <Header textAlign = "center" color = "red" as = "h1">{this.props.message}</Header>
                 <Grid padded = "horizontally" inverted columns={2}>
                     
                         <PCard1 card1 = {this.props.playerHand[0]} gameOn = {this.props.gameOn} />

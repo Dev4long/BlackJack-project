@@ -36,13 +36,15 @@ export default class TestTable extends React.Component{
         let randomIndex = Math.floor(Math.random() * 51)
         let hitOne = deck[randomIndex]
           this.setState({  
-              playerHand: [...this.state.playerHand, hitOne]
-        })
+              playerHand: [...this.state.playerHand, hitOne],
+              dealerHand: [...this.state.dealerHand, hitOne]
+        }, () => this.updateScores())
     }
 
     stay = () => {
           this.setState ({
-              dealerTurn: !this.state.dealerTurn
+              dealerTurn: !this.state.dealerTurn, 
+              message: `Player stays at ${this.state.playerScore}`
         })
     }
 
@@ -53,18 +55,21 @@ export default class TestTable extends React.Component{
         let randomIndex1 = Math.floor(Math.random() * 51)
         let randomIndex3 = Math.floor(Math.random() * 51)
         let randomIndex4 = Math.floor(Math.random() * 51)
+        let randomIndex5 = Math.floor(Math.random() * 51)
+        let randomIndex6 = Math.floor(Math.random() * 51)
         
         let playerCards1 = playingCards[randomIndex]
         let playerCards2 = playingCards[randomIndex1]
         let dealerCard1 = playingCards[randomIndex3]
         let dealerCard2 = playingCards[randomIndex4]
 
+
          this.setState({
              gameOn: !this.state.gameOn, 
              playerHand: [playerCards1, playerCards2],
              dealerHand: [dealerCard1, dealerCard2]
              //mainDeck: playingCards
-         }, () => this.calcPlayerScore())
+         }, () => this.updateScores())
          
      } 
     
@@ -78,12 +83,27 @@ export default class TestTable extends React.Component{
             playerScore: newScore
         }, () => this.youBusted())
      }
+
+     calcDealerScore = () => {
+        let dealScore = 0 
+       this.state.dealerHand.forEach(card => {
+           dealScore += card.value
+       });
+       this.setState({
+           dealerScore: dealScore
+       })
+     }
+     
+     updateScores = () => {
+         this.calcPlayerScore()
+         this.calcDealerScore()
+     }
      
      
      youBusted = () => {
         if (this.state.playerScore > 21){
         this.setState({
-            message: "You busted! Game over!",
+            message: `You busted! Game over! ${this.state.playerScore} `,
             dealerTurn: true
         })
         }
@@ -107,10 +127,13 @@ export default class TestTable extends React.Component{
                     onClick = {() => this.props.newGame()} >New Game</Button>
                 </Segment>
                 
-                <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand}/> 
+                <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand} 
+                dealerTurn = {this.state.dealerTurn} hitFunc = {this.hit} playerScore = {this.state.dealerScore}
+                dealerScore = {this.state.dealerScore} playerScore = {this.state.playerScore}/> 
+
                 <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
                 hitFunc = {this.hit} hitState = {this.state.hit1} dealerTurn = {this.state.dealerTurn}
-                stayFunction = {this.stay}/>
+                stayFunction = {this.stay} message = {this.state.message} score = {this.state.playerScore}/>
             </div>
         )
     }
