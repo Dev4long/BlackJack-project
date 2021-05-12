@@ -3,6 +3,7 @@ import DCard1 from './DCard1'
 import DCard2 from './DCard2'
 import { Grid, Header } from 'semantic-ui-react'
 import Dhit1 from './Dhit1'
+import Dhit2 from './Dhit.2'
 
 
 export default class Dealer extends React.Component {
@@ -20,10 +21,8 @@ export default class Dealer extends React.Component {
                     
                         <DCard1 card1 = {this.props.dealerHand[0]} gameOn = {this.props.gameOn}/>
                         <DCard2 card2 = {this.props.dealerHand[1]} gameOn = {this.props.gameOn}/>
-                        
-
-        
-                        
+                        {this.props.dealerHand.length < 3 ? null: <Dhit1 hit1 = {this.props.dealerHand[2]}/>}
+                        {this.props.dealerHand.length < 4 ? null: <Dhit2 hit2 = {this.props.dealerHand[3]}/>}
                 </Grid>
                 
                 
@@ -31,3 +30,4 @@ export default class Dealer extends React.Component {
         )
     }
 }
+{/* <Dhit1 hit1 = {this.props.dealerHand[2]}/> */}

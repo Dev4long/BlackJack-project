@@ -14,13 +14,14 @@ export default class App extends React.Component {
    this.setState({display: !this.state.display})
  }
 
+ 
 
   
   
   render() {
   return (
     <div className="App"> 
-      {this.state.display === true ? <OpeningPage toTables = {this.toTables}/> : <TestTable newGame = {this.newGame}/>}    
+      {this.state.display === true ? <OpeningPage toTables = {this.toTables}/> : <TestTable />}    
     </div>
   );
 }
