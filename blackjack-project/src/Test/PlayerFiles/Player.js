@@ -25,6 +25,7 @@ export default class Player extends React.Component {
                         {this.props.playerHand.length < 3 ? null: <Hit1 hitCard1 = {this.props.playerHand[2]}/>}
                         {this.props.playerHand.length < 4 ? null: <Hit2 hitCard1 = {this.props.playerHand[3]}/>}
                         {this.props.playerHand.length < 5 ? null: <Hit2 hitCard1 = {this.props.playerHand[4]}/>}
+                        
                 </Grid>
                 <br></br>
                 <br></br>

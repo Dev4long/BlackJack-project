@@ -14,11 +14,7 @@ export default class App extends React.Component {
    this.setState({display: !this.state.display})
  }
 
- newGame = () => {
-  this.setState({
-      display: !this.state.display 
-  })
-}
+
   
   
   render() {

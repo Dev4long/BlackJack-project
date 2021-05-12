@@ -6,6 +6,7 @@ import Dhit1 from './Dhit1'
 
 
 export default class Dealer extends React.Component {
+
     
 
     render() {
@@ -13,15 +14,19 @@ export default class Dealer extends React.Component {
        
         return (
 
-            <div>
+            <div >
                 <Header color = 'violet' as = 'h1' textAlign = "center">Dealer: {this.props.dealerScore}</Header>
-                <Grid relaxed columns={2}>
+                <Grid relaxed columns={2} >
                     
                         <DCard1 card1 = {this.props.dealerHand[0]} gameOn = {this.props.gameOn}/>
                         <DCard2 card2 = {this.props.dealerHand[1]} gameOn = {this.props.gameOn}/>
-                        {this.props.dealerTurn === true && this.props.dealerScore < 21 && this.props.playerScore < 22?
-                        <Dhit1 hit1 = {this.props.dealerHand[2]}/> : null}
+                        
+
+        
+                        
                 </Grid>
+                
+                
             </div>
         )
     }
