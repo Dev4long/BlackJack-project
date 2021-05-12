@@ -8,7 +8,7 @@ export default class Dhit2 extends React.Component{
         return (
             <div>   
                 <Card>
-                     <Image size = 'small' src = {this.props.hitCard1.image} />      
+                     <Image size = 'small' src = {this.props.hit2.image} />      
                 </Card>
             </div>
         )
