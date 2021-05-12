@@ -1,250 +1,265 @@
 {
-  "cards": [
-  {
-     "id":1,
-     "value": 3,
-     "name": "3 of clubs",
-     "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/925/3C__99122.1440113509.1280.1280.png?c=2"
-     
-  },
-  {
-      "id":2,
-      "value": 4,
-      "name": "4 of hearts",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/926/4H__83243.1440113515.1280.1280.png?c=2"
-      
-   },
-   {
-      "id":3,
-      "value": 5,
-      "name": "5 of spades",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/927/5S__90574.1440113521.1280.1280.png?c=2"
-      
-   },{
-      "id":4,
-      "value": 6,
-      "name": "6 of diamonds",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/928/6D__92916.1440113530.1280.1280.png?c=2"
-      
-   },{
-      "id":5,
-      "value": 7,
-      "name": "7 of clubs",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/929/7C__93490.1440113539.1280.1280.png?c=2"
-      
-   },{
-      "id":6,
-      "value": 8,
-      "name": "8 of spades",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/930/8S__27839.1440113555.1280.1280.png?c=2"
-      
-   },{
-      "id":7,
-      "value": 9,
-      "name": "9 of diamonds",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/931/9D__67286.1440113561.1280.1280.png?c=2"
-      
-   },{
-      "id":8,
-      "value": 10,
-      "name": "10 of hearts",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/932/10H__11470.1440113568.1280.1280.png?c=2"
-      
-   },{
-      "id":9,
-      "value": 10,
-      "name": "jack of clubs",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/923/JC__86231.1440113428.1280.1280.png?c=2"
-      
-   },{
-      "id":10,
-      "value": 10,
-      "name": "queen of diamonds",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/934/QD__14920.1440113588.1280.1280.png?c=2"
-      
-   },{
-      "id":11,
-      "value": 10,
-      "name": "king of hearts",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/933/KH__01216.1440113580.1280.1280.png?c=2"
-      
-   },{
-      "id":12,
-      "value": [1, 11],
-      "name": "Ace of spades",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/935/AS__68652.1440113599.1280.1280.png?c=2"
-      
-   },
-   {
-   "id":13,
-      "value": 2,
-      "name": "2 of diamonds",
-      "image": "https://cdn2.bigcommerce.com/n-d57o0b/1kujmu/products/297/images/924/2D__57497.1440113502.1280.1280.png?c=2"
-  }   
-]
-}
-[
-   {
-      "id": 27,
-      "value": [1, 11],
-      "name": "Ace of spades",
-      "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pa.png"
-      
-   },
-   {
-       "id": 28,
-       "value": 2,
-       "name": "2 of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p2.png"
-       
-    },
-    {
-       "id": 29,
-       "value": 3,
-       "name": "3 of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p3.png"
-       
-    },{
-       "id": 30,
-       "value": 4,
-       "name": "4 of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p4.png"
-       
-    },{
-       "id":31,
-       "value": 5,
-       "name": "5 of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p5.png"
-       
-    },{
-       "id":32,
-       "value": 6,
-       "name": "6 of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p6.png"
-       
-    },{
-       "id":33,
-       "value": 7,
-       "name": "7 of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p7.png"
-       
-    },{
-       "id":34,
-       "value": 8,
-       "name": "8 of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p8.png"
-       
-    },{
-       "id":35,
-       "value": 9,
-       "name": "9 of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p9.png"
-       
-    },{
-      "id":36,
-         "value": 10,
-         "name": "10 of spades",
-         "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p10.png"
-     }, 
-    {
-       "id":37,
-       "value": 10,
-       "name": "jack of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pj.png"
-       
-    },{
-       "id":38,
-       "value": 10,
-       "name": "queen of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pq.png"
-       
-    },{
-       "id":39,
-       "value": 10,
-       "name": "king of spades",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pk.png"
-       
-    },
-     
-   {
-      "id": 40,
-      "value": [1, 11],
-      "name": "Ace of diamonds",
-      "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/la.png"
-      
-   },
-   {
-       "id": 41,
-       "value": 2,
-       "name": "2 of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l2.png"
-       
-    },
-    {
-       "id": 42,
-       "value": 3,
-       "name": "3 of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l3.png"
-       
-    },{
-       "id": 43,
-       "value": 4,
-       "name": "4 of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l4.png"
-       
-    },{
-       "id":44,
-       "value": 5,
-       "name": "5 of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l5.png"
-       
-    },{
-       "id":45,
-       "value": 6,
-       "name": "6 of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l6.png"
-       
-    },{
-       "id":46,
-       "value": 7,
-       "name": "7 of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l7.png"
-       
-    },{
-       "id":47,
-       "value": 8,
-       "name": "8 of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l8.png"
-       
-    },{
-       "id":48,
-       "value": 9,
-       "name": "9 of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l9.png"
-       
-    },{
-       "id":49,
-       "value": 10,
-       "name": "10 of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l10.png"
-       
-    },{
-       "id":50,
-       "value": 10,
-       "name": "jack of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/lj.png"
-       
-    },{
-       "id":51,
-       "value": 10,
-       "name": "queen of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/lq.png"
-       
-    },
-    {
+   "cards": [
+ {
+    "id":1,
+    "value": 2,
+    "name": "2 of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/k2.png"
+ },{
+    "id":2,
+    "value": 3,
+    "name": "3 of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/k3.png"
+ },{
+    "id":3,
+    "value": 4,
+    "name": "4 of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/k4.png"
+ },{
+    "id":4,
+    "value": 5,
+    "name": "5 of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/k5.png"
+ },{
+    "id":5,
+    "value": 6,
+    "name": "6 of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/k6.png"
+ },{
+    "id":6,
+    "value": 7,
+    "name": "7 of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/k7.png"
+ },{
+    "id":7,
+    "value": 8,
+    "name": "8 of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/k8.png"
+ },{
+    "id":8,
+    "value": 9,
+    "name": "9 of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/k9.png"
+ },{
+    "id":9,
+    "value": 10,
+    "name": "10 of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/k10.png"
+ },{
+    "id":10,
+    "value": 10,
+    "name": "jack of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/kj.png"
+ },{
+    "id":11,
+    "value": 10,
+    "name": "queen of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/kq.png"
+ },{
+    "id":12,
+    "value": 10,
+    "name": "king of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/kk.png"
+ },{
+    "id":13,
+    "value": [1,11],
+    "name": "ace of clubs",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/ka.png"
+ },{
+    "id":14,
+    "value": 2,
+    "name": "2 of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/s2.png"
+ },{
+    "id":15,
+    "value": 3,
+    "name": "3 of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/s3.png"
+ },{
+    "id":16,
+    "value": 4,
+    "name": "4 of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/s4.png"
+ },{
+    "id":17,
+    "value": 5,
+    "name": "5 of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/s5.png"
+ },{
+    "id":18,
+    "value": 6,
+    "name": "6 of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/s6.png"
+ },{
+    "id":19,
+    "value": 7,
+    "name": "7 of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/s7.png"
+ },{
+    "id":20,
+    "value": 8,
+    "name": "8 of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/s8.png"
+ },{
+    "id":21,
+    "value": 9,
+    "name": "9 of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/s9.png"
+ },{
+    "id":22,
+    "value": 10,
+    "name": "10 of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/s10.png"
+ },{
+    "id":23,
+    "value": 10,
+    "name": "jack of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/sj.png"
+ },{
+    "id":24,
+    "value": 10,
+    "name": "queen of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/sq.png"
+ },{
+    "id":25,
+    "value": 10,
+    "name": "king of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/sk.png"
+ },{
+    "id":26,
+    "value": [1,11],
+    "name": "ace of hearts",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/sa.png"
+ },{
+    "id": 27,
+    "value": [1, 11],
+    "name": "Ace of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pa.png"
+ },{
+    "id": 28,
+    "value": 2,
+    "name": "2 of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p2.png"
+ },{
+    "id": 29,
+    "value": 3,
+    "name": "3 of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p3.png"
+ },{
+    "id": 30,
+    "value": 4,
+    "name": "4 of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p4.png"
+ },{
+    "id":31,
+    "value": 5,
+    "name": "5 of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p5.png"
+ },{
+    "id":32,
+    "value": 6,
+    "name": "6 of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p6.png"
+ },{
+    "id":33,
+    "value": 7,
+    "name": "7 of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p7.png"
+ },{
+    "id":34,
+    "value": 8,
+    "name": "8 of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p8.png"
+ },{
+    "id":35,
+    "value": 9,
+    "name": "9 of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p9.png"
+ },{
+    "id":36,
+    "value": 10,
+    "name": "10 of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/p10.png"
+ },{
+    "id":37,
+    "value": 10,
+    "name": "jack of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pj.png"
+ },{
+    "id":38,
+    "value": 10,
+    "name": "queen of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pq.png"
+ },{
+    "id":39,
+    "value": 10,
+    "name": "king of spades",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pk.png"
+ },{
+    "id": 40,
+    "value": [1, 11],
+    "name": "Ace of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/la.png"
+ },{
+    "id": 41,
+    "value": 2,
+    "name": "2 of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l2.png"
+ },{
+    "id": 42,
+    "value": 3,
+    "name": "3 of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l3.png"
+ },{
+    "id": 43,
+    "value": 4,
+    "name": "4 of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l4.png"
+ },{
+    "id":44,
+    "value": 5,
+    "name": "5 of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l5.png"
+ },{
+    "id":45,
+    "value": 6,
+    "name": "6 of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l6.png"
+ },{
+    "id":46,
+    "value": 7,
+    "name": "7 of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l7.png"
+ },{
+    "id":47,
+    "value": 8,
+    "name": "8 of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l8.png"
+ },{
+    "id":48,
+    "value": 9,
+    "name": "9 of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l9.png"
+ },{
+    "id":49,
+    "value": 10,
+    "name": "10 of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/l10.png"
+ },{
+    "id":50,
+    "value": 10,
+    "name": "jack of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/lj.png"
+ },{
+    "id":51,
+    "value": 10,
+    "name": "queen of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/lq.png"
+ },{
     "id":52,
-       "value": 10,
-       "name": "king of diamonds",
-       "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/lk.png"
-   }   
+    "value": 10,
+    "name": "king of diamonds",
+    "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/lk.png"
+ }
  ]
+ }
