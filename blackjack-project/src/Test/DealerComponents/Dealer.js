@@ -1,7 +1,7 @@
 import React from 'react'
 import DCard1 from './DCard1'
 import DCard2 from './DCard2'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Header } from 'semantic-ui-react'
 
 
 export default class Dealer extends React.Component {
@@ -13,7 +13,7 @@ export default class Dealer extends React.Component {
         return (
 
             <div>
-                <h2>Dealer</h2>
+                <Header color = 'violet' as = 'h1' textAlign = "center">Dealer</Header>
                 <Grid relaxed columns={2}>
                     
                         <DCard1 card1 = {this.props.dealerHand[0]} gameOn = {this.props.gameOn}/>

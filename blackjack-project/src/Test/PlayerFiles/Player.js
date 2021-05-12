@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Button } from 'semantic-ui-react'
+import { Grid, Button, Header} from 'semantic-ui-react'
 import PCard1 from './PCard1'
 import PCard2 from './PCard2'
 import Hit1 from './Hit1'
@@ -7,17 +7,15 @@ import Hit2 from './Hit2'
 
 
 export default class Player extends React.Component {
-    
-    //{this.props.hitState === true ?
+
     render() {
         return (
 
             <div>
                 <br></br>
                 <br></br>
-                <h2>Your Hand</h2>
-                <div>player score: {this.props.playerScore}</div>
-                <p>{this.props.message}</p>
+                {this.props.dealerTurn === false? <Header textAlign = "center" color = "blue" as = 'h1'>Your Hand</Header> 
+                : <Header textAlign = "center" color = "red" as = 'h1'>Player Stays</Header>}
                 <h2></h2>
                 <Grid padded = "horizontally" inverted columns={2}>
                     
@@ -29,8 +27,8 @@ export default class Player extends React.Component {
                 </Grid>
                 <br></br>
                 <br></br>
-                <Button color = "blue" size = "large" round onClick = {() => this.props.hitFunc()}>Hit</Button>
-                <Button color = "green" size = "large" round> Stay </Button>
+                {this.props.dealerTurn === false ? <Button color = "blue" size = "large" round onClick = {() => this.props.hitFunc()}>Hit</Button> : null}
+                {this.props.dealerTurn === false? <Button onClick = {() => {this.props.stayFunction()}} color = "green" size = "large" round> Stay </Button> : null}
             </div>
         )
     }

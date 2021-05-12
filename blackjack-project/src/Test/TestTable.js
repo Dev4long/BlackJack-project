@@ -2,14 +2,10 @@ import React from 'react'
 import App from '../App'
 import Dealer from './DealerComponents/Dealer'
 import Player from './PlayerFiles/Player'
-import { Grid, Button, Header } from 'semantic-ui-react'
-
-
+import { Grid, Button, Segment, Header } from 'semantic-ui-react'
 
 
 export default class TestTable extends React.Component{
-
-   
    
     state = {
         cards: [],
@@ -24,44 +20,39 @@ export default class TestTable extends React.Component{
         message: null
     }
   
-      componentDidMount(){
+    componentDidMount(){
           fetch('http://localhost:3000/cards')
           .then(res => res.json())
           .then(cards => this.setState(
               {cards: cards,
                mainDeck: cards 
-            }))
-            
-        }
+            }))    
+    }
 
-      hit= () => {
+
+    hit= () => {
 
         let deck = this.state.mainDeck
         let randomIndex = Math.floor(Math.random() * 51)
         let hitOne = deck[randomIndex]
           this.setState({  
               playerHand: [...this.state.playerHand, hitOne]
-          }, () => this.calcPlayerScore())
-        
-      }
+        })
+    }
 
-      dealerTurn = () => {
+    stay = () => {
           this.setState ({
               dealerTurn: !this.state.dealerTurn
-          })
-      }
+        })
+    }
 
-     gameOn = () => {
+    gameOn = () => {
         
         let playingCards = this.state.mainDeck
         let randomIndex = Math.floor(Math.random() * 51)
         let randomIndex1 = Math.floor(Math.random() * 51)
-        let randomIndex2 = Math.floor(Math.random() * 51)
         let randomIndex3 = Math.floor(Math.random() * 51)
         let randomIndex4 = Math.floor(Math.random() * 51)
-        // let playerCards1 = playingCards.splice(randomIndex, 1)
-        // let playerCards2 = playingCards.splice(randomIndex, 1)
-        // let dealerCard = playingCards.splice(randomIndex, 1)
         
         let playerCards1 = playingCards[randomIndex]
         let playerCards2 = playingCards[randomIndex1]
@@ -109,11 +100,17 @@ export default class TestTable extends React.Component{
 
         return (
             <div className = "table">
-                <Header textAlign = "center" color = "red" as='h1'>BlackJack</Header>
-                <button onClick = {() => this.gameOn()}>Deal</button>
+                <Segment textAlign = "center" color = "red" as='h1'>
+                    <Header color = "red" as = 'h1' textAlign = "center">BLACKJACK!</Header>
+                    <Button size = "large" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
+                    <Button size = "large" color ="orange" 
+                    onClick = {() => this.props.newGame()} >New Game</Button>
+                </Segment>
+                
                 <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand}/> 
                 <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
-                hitFunc = {this.hit} hitState = {this.state.hit1} playerScore={this.state.playerScore} message={this.state.message}/>
+                hitFunc = {this.hit} hitState = {this.state.hit1} dealerTurn = {this.state.dealerTurn}
+                stayFunction = {this.stay}/>
             </div>
         )
     }
