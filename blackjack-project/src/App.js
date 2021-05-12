@@ -13,12 +13,18 @@ export default class App extends React.Component {
  toTables = () => {
    this.setState({display: !this.state.display})
  }
+
+ newGame = () => {
+  this.setState({
+      display: !this.state.display 
+  })
+}
   
   
   render() {
   return (
     <div className="App"> 
-      {this.state.display === true ? <OpeningPage toTables = {this.toTables}/> : <TestTable/>}    
+      {this.state.display === true ? <OpeningPage toTables = {this.toTables}/> : <TestTable newGame = {this.newGame}/>}    
     </div>
   );
 }
