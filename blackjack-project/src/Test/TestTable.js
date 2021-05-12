@@ -1,6 +1,9 @@
 import React from 'react'
+import App from '../App'
 import Dealer from './DealerComponents/Dealer'
 import Player from './PlayerFiles/Player'
+import { Grid, Button, Header } from 'semantic-ui-react'
+
 
 
 
@@ -12,14 +15,11 @@ export default class TestTable extends React.Component{
         cards: [],
         mainDeck: [],
         gameOn: false, 
-        hit1: false, 
-        hit2: false, 
-        hit3: false, 
         playerHand: [], 
         dealerHand: [],
         hitCard1: {},
-        playerScore: null
-
+        playerScore: null,
+        dealerTurn: false
       }
   
       componentDidMount(){
@@ -28,7 +28,6 @@ export default class TestTable extends React.Component{
           .then(cards => this.setState(
               {cards: cards,
                mainDeck: cards 
-               
             }))
             
       }
@@ -37,13 +36,17 @@ export default class TestTable extends React.Component{
 
         let deck = this.state.mainDeck
         let randomIndex = Math.floor(Math.random() * 51)
-
-          this.setState({
-              hit1: true, 
-              hitCard1: deck[randomIndex] 
+        let hitOne = deck[randomIndex]
+          this.setState({  
+              playerHand: [...this.state.playerHand, hitOne]
           })
       }
 
+      dealerTurn = () => {
+          this.setState ({
+              dealerTurn: !this.state.dealerTurn
+          })
+      }
 
      gameOn = () => {
         
@@ -75,11 +78,12 @@ export default class TestTable extends React.Component{
         console.log(this.state.playingCards)
 
         return (
-            <div>
+            <div className = "table">
+                <Header textAlign = "center" color = "red" as='h1'>BlackJack</Header>
                 <button onClick = {() => this.gameOn()}>Deal</button>
                 <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand}/> 
                 <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
-                hitFunc = {this.hit} hitCard1 = {this.state.hitCard1} hitState = {this.state.hit1}/>
+                hitFunc = {this.hit} hitState = {this.state.hit1}/>
             </div>
         )
     }
