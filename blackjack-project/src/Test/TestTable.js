@@ -18,9 +18,11 @@ export default class TestTable extends React.Component{
         playerHand: [], 
         dealerHand: [],
         hitCard1: {},
-        playerScore: null,
-        dealerTurn: false
-      }
+        playerScore: 0,
+        dealerScore: 0,
+        dealerTurn: false,
+        message: null
+    }
   
       componentDidMount(){
           fetch('http://localhost:3000/cards')
@@ -30,7 +32,7 @@ export default class TestTable extends React.Component{
                mainDeck: cards 
             }))
             
-      }
+        }
 
       hit= () => {
 
@@ -39,7 +41,8 @@ export default class TestTable extends React.Component{
         let hitOne = deck[randomIndex]
           this.setState({  
               playerHand: [...this.state.playerHand, hitOne]
-          })
+          }, () => this.calcPlayerScore())
+        
       }
 
       dealerTurn = () => {
@@ -66,16 +69,43 @@ export default class TestTable extends React.Component{
         let dealerCard2 = playingCards[randomIndex4]
 
          this.setState({
-             gameOn: !this.state.gameOn,
+             gameOn: !this.state.gameOn, 
              playerHand: [playerCards1, playerCards2],
              dealerHand: [dealerCard1, dealerCard2]
              //mainDeck: playingCards
-         })
+         }, () => this.calcPlayerScore())
+         
      } 
+    
+     
+     calcPlayerScore = () => {
+         let newScore = 0 
+        this.state.playerHand.forEach(card => {
+            newScore += card.value
+        });
+        this.setState({
+            playerScore: newScore
+        }, () => this.youBusted())
+     }
+     
+     
+     youBusted = () => {
+        if (this.state.playerScore > 21){
+        this.setState({
+            message: "You busted! Game over!",
+            dealerTurn: true
+        })
+        }
+
+    //  dealerBusted = () => {
+    //     if (this.state.dealerScore < 18)
+    //  }
+    }
+     
 
     
     render(){
-        console.log(this.state.playingCards)
+        
 
         return (
             <div className = "table">
@@ -83,7 +113,7 @@ export default class TestTable extends React.Component{
                 <button onClick = {() => this.gameOn()}>Deal</button>
                 <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand}/> 
                 <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
-                hitFunc = {this.hit} hitState = {this.state.hit1}/>
+                hitFunc = {this.hit} hitState = {this.state.hit1} playerScore={this.state.playerScore} message={this.state.message}/>
             </div>
         )
     }

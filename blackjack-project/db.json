@@ -62,7 +62,7 @@
     "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/kk.png"
  },{
     "id":13,
-    "value": [1,11],
+    "value": 11,
     "name": "ace of clubs",
     "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/ka.png"
  },{
@@ -127,12 +127,12 @@
     "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/sk.png"
  },{
     "id":26,
-    "value": [1,11],
+    "value": 11,
     "name": "ace of hearts",
     "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/sa.png"
  },{
     "id": 27,
-    "value": [1, 11],
+    "value": 11,
     "name": "Ace of spades",
     "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pa.png"
  },{
@@ -197,7 +197,7 @@
     "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/pk.png"
  },{
     "id": 40,
-    "value": [1, 11],
+    "value": 11,
     "name": "Ace of diamonds",
     "image": "https://c7m8x4h5.rocketcdn.me/wp-content/uploads/2020/11/la.png"
  },{

@@ -16,6 +16,8 @@ export default class Player extends React.Component {
                 <br></br>
                 <br></br>
                 <h2>Your Hand</h2>
+                <div>player score: {this.props.playerScore}</div>
+                <p>{this.props.message}</p>
                 <h2></h2>
                 <Grid padded = "horizontally" inverted columns={2}>
                     
