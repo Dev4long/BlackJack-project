@@ -39,7 +39,7 @@ export default class TestTable extends React.Component{
           this.setState({  
               playerHand: [...this.state.playerHand, hitOne]
           })
-        this.calcPlayerScore()
+        // this.calcPlayerScore()
       }
 
       dealerTurn = () => {
