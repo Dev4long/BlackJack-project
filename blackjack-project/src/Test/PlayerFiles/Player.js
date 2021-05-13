@@ -11,12 +11,22 @@ export default class Player extends React.Component {
     render() {
         return (
 
-            <div>
+            <div> 
                 <br></br>
-                <br></br>
-                {this.props.dealerTurn === false? <Header textAlign = "center" color = "blue" as = 'h1'>Your Hand: {this.props.score}</Header> 
+                {this.props.dealerTurn === false? <Header textAlign = "center" color = "teal" as = 'h1'>Your Hand: {this.props.score}</Header> 
                 : <Header textAlign = "center" color = "red" as = 'h1'></Header>}
-       
+
+            <Grid>
+            <Grid.Column textAlign="center">
+            {this.props.dealerTurn === false ? <Button color = "blue" size = "large" round onClick = {() => this.props.hitFunc()}>Hit</Button> : null}
+            {this.props.dealerTurn === false? <Button onClick = {() => {this.props.stayFunction()}} color = "green" size = "large" round> Stay </Button> : null}
+            
+            
+            
+            </Grid.Column>
+            </Grid>
+
+                
                 <Header textAlign = "center" color = "red" as = "h1">{this.props.message}</Header>
                 <Grid padded = "horizontally" inverted columns={2}>
                     
@@ -25,11 +35,11 @@ export default class Player extends React.Component {
                         {this.props.playerHand.length < 3 ? null: <Hit1 hitCard1 = {this.props.playerHand[2]}/>}
                         {this.props.playerHand.length < 4 ? null: <Hit2 hitCard1 = {this.props.playerHand[3]}/>}
                         {this.props.playerHand.length < 5 ? null: <Hit2 hitCard1 = {this.props.playerHand[4]}/>}
+                        
                 </Grid>
                 <br></br>
                 <br></br>
-                {this.props.dealerTurn === false ? <Button color = "blue" size = "large" round onClick = {() => this.props.hitFunc()}>Hit</Button> : null}
-                {this.props.dealerTurn === false? <Button onClick = {() => {this.props.stayFunction()}} color = "green" size = "large" round> Stay </Button> : null}
+               
             </div>
         )
     }

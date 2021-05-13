@@ -5,7 +5,7 @@ import Player from './PlayerFiles/Player'
 import { Grid, Button, Segment, Header } from 'semantic-ui-react'
 
 
-export default class Table250 extends React.Component{
+export default class TestTable extends React.Component{
    
     state = {
         cards: [],
@@ -25,11 +25,15 @@ export default class Table250 extends React.Component{
     }
   
     componentDidMount(){
+
+        let randomIndex = Math.floor(Math.random() * 51)
+
           fetch('http://localhost:3000/cards')
           .then(res => res.json())
           .then(cards => this.setState(
               {cards: cards,
-               mainDeck: cards 
+               mainDeck: cards, 
+               hitCard1: cards[randomIndex]
             }))    
     }
     newGame = () => {
@@ -48,6 +52,7 @@ export default class Table250 extends React.Component{
             dealerOver: false
         })
     }
+
 
     hit= () => {
 
@@ -120,8 +125,7 @@ export default class Table250 extends React.Component{
         let randomIndex1 = Math.floor(Math.random() * 51)
         let randomIndex3 = Math.floor(Math.random() * 51)
         let randomIndex4 = Math.floor(Math.random() * 51)
-        let randomIndex5 = Math.floor(Math.random() * 51)
-        let randomIndex6 = Math.floor(Math.random() * 51)
+        
         
         let playerCards1 = playingCards[randomIndex]
         let playerCards2 = playingCards[randomIndex1]
@@ -132,7 +136,7 @@ export default class Table250 extends React.Component{
          this.setState({
              gameOn: !this.state.gameOn, 
              playerHand: [playerCards1, playerCards2],
-             dealerHand: [dealerCard1, dealerCard2]
+             dealerHand: [dealerCard1, dealerCard2],
              //mainDeck: playingCards
          }, () => this.updateScores())
          
@@ -206,6 +210,9 @@ export default class Table250 extends React.Component{
     }
          
      
+     newDealerScore = () =>{
+        this.setState({dealerScore: this.state.dealerScore + this.state.hitCard1.value})
+     }
      
      youBusted = () => {
         if (this.state.playerScore > 21){
@@ -232,21 +239,33 @@ export default class Table250 extends React.Component{
         let randomIndex4 = Math.floor(Math.random() * 13)
         return (
             <div className = "table">
-                <Segment textAlign = "center" color = "red" as='h1'>
-                    <Header color = "red" as = 'h1' textAlign = "center">BLACKJACK! Table 250</Header>
-                    <Header color = "red" as = 'h3' textAlign = "center">{this.state.winLossMessage}</Header>
-                    <Button size = "large" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
-                    <Button size = "large" color ="orange" 
+            <br></br>
+            
+                    
+            <Grid>
+            <Grid.Column textAlign="center" center>
+            <Header color = "orange" as = 'h1' textAlign = "center">BLACKJACK! Table 250</Header>
+            <Header color = "red" as = 'h3' textAlign = "center">{this.state.winLossMessage}</Header>
+                    <Button size = "medium" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
+                    <Button size = "medium" color ="orange" 
                     onClick = {() => this.newGame()} >New Game</Button>
-                </Segment>
-                
+
                 <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand} 
-                dealerTurn = {this.state.dealerTurn} hitFunc = {this.hit} playerScore = {this.state.dealerScore}
-                dealerScore = {this.state.dealerScore} playerScore = {this.state.playerScore}/> 
+                dealerTurn = {this.state.dealerTurn} dealerScore = {this.state.dealerScore} 
+                playerScore = {this.state.playerScore} hitCard1 = {this.state.hitCard1} 
+                dealerHit = {this.dealerHit} renderHit1 = {this.state.renderHit1}/> 
 
                 <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
                 hitFunc = {this.hit} hitState = {this.state.hit1} dealerTurn = {this.state.dealerTurn}
                 stayFunction = {this.stay} message = {this.state.message} score = {this.state.playerScore}/>
+            </Grid.Column>
+            </Grid>
+            
+                
+               
+                <br></br>
+                <br></br>
+                <br></br>
             </div>
         )
     }
