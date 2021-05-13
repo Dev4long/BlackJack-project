@@ -231,13 +231,19 @@ export default class TestTable extends React.Component{
         let randomIndex4 = Math.floor(Math.random() * 13)
         return (
             <div className = "table">
-                <Segment textAlign = "center" color = "red" as='h1'>
-                    <Header color = "red" as = 'h1' textAlign = "center">BLACKJACK! Table 50</Header>
+            <br></br>
+            
+                    
+            <Grid>
+            <Grid.Column textAlign="center">
+            <Header color = "orange" as = 'h1' textAlign = "center">BLACKJACK! Table 50</Header>
                     {this.state.gameOver ? <Header textAlign = "center" color = "blue" as = 'h1'>{this.state.winLoss}</Header> : null}
-                    <Button size = "large" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
-                    <Button size = "large" color ="orange" 
+                    <Button size = "medium" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
+                    <Button size = "medium" color ="orange" 
                     onClick = {() => this.newGame()} >New Game</Button>
-                </Segment>
+            </Grid.Column>
+            </Grid>
+            
                 
                 <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand} 
                 dealerTurn = {this.state.dealerTurn} dealerScore = {this.state.dealerScore} 
@@ -247,6 +253,9 @@ export default class TestTable extends React.Component{
                 <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
                 hitFunc = {this.hit} hitState = {this.state.hit1} dealerTurn = {this.state.dealerTurn}
                 stayFunction = {this.stay} message = {this.state.message} score = {this.state.playerScore}/>
+                <br></br>
+                <br></br>
+                <br></br>
             </div>
         )
     }

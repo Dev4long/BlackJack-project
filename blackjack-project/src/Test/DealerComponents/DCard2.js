@@ -7,10 +7,10 @@ export default class DCard2 extends React.Component{
     render(){
         return (
             <div>   
-                <Card>
+                
                      <Image size = "small" src= {this.props.gameOn === false ? "http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg": 
                     this.props.card2.image} />      
-                </Card>
+                
             </div>
         )
     }

@@ -16,8 +16,8 @@ export default class Dealer extends React.Component {
         return (
 
             <div >
-                <Header color = 'violet' as = 'h1' textAlign = "center">Dealer: {this.props.dealerScore}</Header>
-                <Grid relaxed columns={2} >
+                <Header color = 'yellow' as = 'h1' textAlign = "center">Dealer: {this.props.dealerScore}</Header>
+                <Grid padded = "horizontally" columns={2} >
                     
                         <DCard1 card1 = {this.props.dealerHand[0]} gameOn = {this.props.gameOn}/>
                         <DCard2 card2 = {this.props.dealerHand[1]} gameOn = {this.props.gameOn}/>

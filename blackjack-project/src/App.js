@@ -9,15 +9,12 @@ import { Route, Switch, Link } from 'react-router-dom'
 
 export default class App extends React.Component {
   
-  
-
- 
-
-  
-  
   render() {
   return (
-    <div className="App"> 
+    <div 
+      style={{ 
+      backgroundImage: `url("https://media.istockphoto.com/vectors/poker-table-background-in-green-color-vector-id1206505233?k=6&m=1206505233&s=612x612&w=0&h=3yK8zXZmrh3-tRVtw0wY-AiTTwnqFf_mmNlIGAjlr4E=")`}}
+      className="App"> 
       <Switch>
         <Route path = "/table50" >
           <TestTable />
@@ -30,8 +27,7 @@ export default class App extends React.Component {
         </Route>
         <Route path ="/" component={OpeningPage}/>
       </Switch>
-      
-         
+               
     </div>
   );
 }
