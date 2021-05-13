@@ -5,7 +5,7 @@ import Player from './PlayerFiles/Player'
 import { Grid, Button, Segment, Header } from 'semantic-ui-react'
 
 
-export default class TestTable extends React.Component{
+export default class Table250 extends React.Component{
    
     state = {
         cards: [],
@@ -24,15 +24,11 @@ export default class TestTable extends React.Component{
     }
   
     componentDidMount(){
-
-        let randomIndex = Math.floor(Math.random() * 51)
-
           fetch('http://localhost:3000/cards')
           .then(res => res.json())
           .then(cards => this.setState(
               {cards: cards,
-               mainDeck: cards, 
-               hitCard1: cards[randomIndex]
+               mainDeck: cards 
             }))    
     }
     newGame = () => {
@@ -47,11 +43,9 @@ export default class TestTable extends React.Component{
             dealerTurn: false,
             message: null,
             playerStays: false,
-            winLoss: null, 
-            gameOver: false
+            winLoss: null
         })
     }
-
 
     hit= () => {
 
@@ -121,7 +115,8 @@ export default class TestTable extends React.Component{
         let randomIndex1 = Math.floor(Math.random() * 51)
         let randomIndex3 = Math.floor(Math.random() * 51)
         let randomIndex4 = Math.floor(Math.random() * 51)
-        
+        let randomIndex5 = Math.floor(Math.random() * 51)
+        let randomIndex6 = Math.floor(Math.random() * 51)
         
         let playerCards1 = playingCards[randomIndex]
         let playerCards2 = playingCards[randomIndex1]
@@ -132,7 +127,7 @@ export default class TestTable extends React.Component{
          this.setState({
              gameOn: !this.state.gameOn, 
              playerHand: [playerCards1, playerCards2],
-             dealerHand: [dealerCard1, dealerCard2],
+             dealerHand: [dealerCard1, dealerCard2]
              //mainDeck: playingCards
          }, () => this.updateScores())
          
@@ -170,16 +165,19 @@ export default class TestTable extends React.Component{
             if(this.state.playerScore > this.state.dealerScore){
                 this.setState({
                     winLoss: "you won",
+                    gameOver: true
                 })
             }
-            else if(this.state.playerScore <this.state.dealerScore ){
+            else if(this.state.playerScore <this.state.dealerScore){
                 this.setState({
                     winLoss: "Dealer Wins",
+                    gameOver: true
                 })
             }
             else if(this.state.playerScore === this.state.dealerScore){ 
                 this.setState({
                     winLoss: "draw",
+                    gameOver: true
                 })
             }
          }
@@ -187,12 +185,14 @@ export default class TestTable extends React.Component{
              if(this.state.playerScore < 22){
                 this.setState({
                     winLoss: "you won",
+                    gameOver: true
                 })
             
              }
              else{
                 this.setState({
                     winLoss: "You Lose",
+                    gameOver: true
                 })
              }
          }
@@ -200,9 +200,6 @@ export default class TestTable extends React.Component{
 
      }
      
-     newDealerScore = () =>{
-        this.setState({dealerScore: this.state.dealerScore + this.state.hitCard1.value})
-     }
      
      youBusted = () => {
         if (this.state.playerScore > 21){
@@ -213,13 +210,15 @@ export default class TestTable extends React.Component{
         }
         )
     }
-     }
 
-     playerStays = () => {
-         this.setState({
-             
-         })
-     }
+    //  dealerBusted = () => {
+    //     if (this.state.dealerScore < 18)
+    //  }
+    }
+     
+
+   
+     
 
     
     render(){
@@ -232,7 +231,7 @@ export default class TestTable extends React.Component{
         return (
             <div className = "table">
                 <Segment textAlign = "center" color = "red" as='h1'>
-                    <Header color = "red" as = 'h1' textAlign = "center">BLACKJACK! Table 50</Header>
+                    <Header color = "red" as = 'h1' textAlign = "center">BLACKJACK! Table 250</Header>
                     {this.state.gameOver ? <Header textAlign = "center" color = "blue" as = 'h1'>{this.state.winLoss}</Header> : null}
                     <Button size = "large" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
                     <Button size = "large" color ="orange" 
@@ -240,9 +239,8 @@ export default class TestTable extends React.Component{
                 </Segment>
                 
                 <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand} 
-                dealerTurn = {this.state.dealerTurn} dealerScore = {this.state.dealerScore} 
-                playerScore = {this.state.playerScore} hitCard1 = {this.state.hitCard1} 
-                dealerHit = {this.dealerHit} renderHit1 = {this.state.renderHit1}/> 
+                dealerTurn = {this.state.dealerTurn} hitFunc = {this.hit} playerScore = {this.state.dealerScore}
+                dealerScore = {this.state.dealerScore} playerScore = {this.state.playerScore}/> 
 
                 <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
                 hitFunc = {this.hit} hitState = {this.state.hit1} dealerTurn = {this.state.dealerTurn}
