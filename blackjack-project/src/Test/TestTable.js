@@ -18,9 +18,10 @@ export default class TestTable extends React.Component{
         dealerTurn: false,
         message: null,
         playerStays: false,
-        winLoss: null,
+        winLossMessage: "",
         mainDeck: [],
-        gameOver: false
+        gameOver: false,
+        dealerOver: false
     }
   
     componentDidMount(){
@@ -43,7 +44,8 @@ export default class TestTable extends React.Component{
             dealerTurn: false,
             message: null,
             playerStays: false,
-            winLoss: null
+            winLossMessage: "",
+            dealerOver: false
         })
     }
 
@@ -75,7 +77,10 @@ export default class TestTable extends React.Component{
             this.dealerStaysHit()
         }
         else {
-            this.checkDealerBust()
+            this.setState({
+                dealerOver: true
+            }, () => this.checkDealerBust())
+            
         }
     }
     dealerStaysHit = () => {
@@ -108,7 +113,7 @@ export default class TestTable extends React.Component{
         )
     }
 
-    gameOn = () => {
+     gameOn = () => {
         
         let playingCards = this.state.mainDeck
         let randomIndex = Math.floor(Math.random() * 51)
@@ -131,8 +136,7 @@ export default class TestTable extends React.Component{
              //mainDeck: playingCards
          }, () => this.updateScores())
          
-     } 
-    
+     }
      
      calcPlayerScore = () => {
          let newScore = 0 
@@ -160,61 +164,59 @@ export default class TestTable extends React.Component{
         this.calcDealerScore()
         
      }
-     checkDealerBust = () => {
-         if(this.state.dealerScore > 16 && this.state.dealerScore <22){
-            if(this.state.playerScore > this.state.dealerScore){
-                this.setState({
-                    winLoss: "you won",
-                    gameOver: true
-                })
-            }
-            else if(this.state.playerScore <this.state.dealerScore){
-                this.setState({
-                    winLoss: "Dealer Wins",
-                    gameOver: true
-                })
-            }
-            else if(this.state.playerScore === this.state.dealerScore){ 
-                this.setState({
-                    winLoss: "draw",
-                    gameOver: true
-                })
-            }
-         }
-         else {
-             if(this.state.playerScore < 22){
-                this.setState({
-                    winLoss: "you won",
-                    gameOver: true
-                })
-            
-             }
-             else{
-                this.setState({
-                    winLoss: "You Lose",
-                    gameOver: true
-                })
-             }
-         }
-         
-
+     setDealerWin = () => {
+         this.setState({
+            winLossMessage: `Dealer Wins. 😢 `
+         })
      }
+
+     setPlayerWin = () => {
+        this.setState({
+            winLossMessage: `You Win.  🥳`
+         })
+     }
+     setDraw = () => {
+        this.setState({
+            winLossMessage: `Tie. No one wins. `
+         })
+     }
+
+
+    checkDealerBust = () => {
+        if(this.state.dealerOver == true){
+            if(this.state.dealerScore <22){
+                if(this.state.playerScore > this.state.dealerScore ){
+                    this.props.bet(true)
+                    this.setPlayerWin()
+                }
+                if(this.state.playerScore < this.state.dealerScore){
+                    this.props.bet(false)
+                    this.setDealerWin()
+                }
+                if(this.state.playerScore == this.state.dealerScore){ 
+                    this.setDraw()
+                }
+            }
+            if(this.state.dealerScore >21){
+                this.props.bet(true)
+                this.setPlayerWin()
+            }
+        }
+       
+    }
+         
      
      
      youBusted = () => {
         if (this.state.playerScore > 21){
-        this.setState({
-            message: `You busted! Game over! ${this.state.playerScore} `,
-            gameOver: true,
-            winLoss: "You Lose"
+            this.props.bet(false)
+            this.setState({
+                winLossMessage: `You busted! Game over!  `,
+                gameOver: true,
+                
+            })
         }
-        )
-    }
-
-    //  dealerBusted = () => {
-    //     if (this.state.dealerScore < 18)
-    //  }
-    }
+     }
      
 
    
@@ -232,7 +234,7 @@ export default class TestTable extends React.Component{
             <div className = "table">
                 <Segment textAlign = "center" color = "red" as='h1'>
                     <Header color = "red" as = 'h1' textAlign = "center">BLACKJACK! Table 50</Header>
-                    {this.state.gameOver ? <Header textAlign = "center" color = "blue" as = 'h1'>{this.state.winLoss}</Header> : null}
+                    <Header color = "red" as = 'h3' textAlign = "center">{this.state.winLossMessage}</Header>
                     <Button size = "large" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
                     <Button size = "large" color ="orange" 
                     onClick = {() => this.newGame()} >New Game</Button>
