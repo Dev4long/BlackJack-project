@@ -5,7 +5,7 @@ import Player from './PlayerFiles/Player'
 import { Grid, Button, Segment, Header } from 'semantic-ui-react'
 
 
-export default class TestTable extends React.Component{
+export default class TestTable100 extends React.Component{
    
     state = {
         cards: [],
