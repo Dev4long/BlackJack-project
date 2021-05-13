@@ -14,6 +14,9 @@ class MainLobby extends React.Component{
          </div>
         )
     }
+    conditionalRender = () => {
+        
+    }
 
 }
 

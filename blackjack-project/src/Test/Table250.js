@@ -5,7 +5,7 @@ import Player from './PlayerFiles/Player'
 import { Grid, Button, Segment, Header } from 'semantic-ui-react'
 
 
-export default class TestTable extends React.Component{
+export default class Table250 extends React.Component{
    
     state = {
         cards: [],
@@ -231,7 +231,7 @@ export default class TestTable extends React.Component{
         return (
             <div className = "table">
                 <Segment textAlign = "center" color = "red" as='h1'>
-                    <Header color = "red" as = 'h1' textAlign = "center">BLACKJACK! Table 50</Header>
+                    <Header color = "red" as = 'h1' textAlign = "center">BLACKJACK! Table 250</Header>
                     {this.state.gameOver ? <Header textAlign = "center" color = "blue" as = 'h1'>{this.state.winLoss}</Header> : null}
                     <Button size = "large" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
                     <Button size = "large" color ="orange" 
