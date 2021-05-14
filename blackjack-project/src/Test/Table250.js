@@ -49,7 +49,8 @@ export default class TestTable extends React.Component{
             message: null,
             playerStays: false,
             winLossMessage: "",
-            dealerOver: false
+            dealerOver: false,
+            gameOver: false
         })
     }
 
@@ -244,10 +245,10 @@ export default class TestTable extends React.Component{
                     
             <Grid>
             <Grid.Column textAlign="center" center>
-            <Header color = "orange" as = 'h1' textAlign = "center">BLACKJACK! Table 250</Header>
-            <Header color = "red" as = 'h3' textAlign = "center">{this.state.winLossMessage}</Header>
-                    <Button size = "medium" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
-                    <Button size = "medium" color ="orange" 
+                <Header color = "orange" as = 'h1' textAlign = "center">BLACKJACK! Table 250</Header>
+                <Header color = "red" as = 'h3' textAlign = "center">{this.state.winLossMessage}</Header>
+                <Button size = "medium" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
+                <Button size = "medium" color ="orange" 
                     onClick = {() => this.newGame()} >New Game</Button>
 
                 <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand} 
@@ -257,7 +258,8 @@ export default class TestTable extends React.Component{
 
                 <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
                 hitFunc = {this.hit} hitState = {this.state.hit1} dealerTurn = {this.state.dealerTurn}
-                stayFunction = {this.stay} message = {this.state.message} score = {this.state.playerScore}/>
+                stayFunction = {this.stay} message = {this.state.message} score = {this.state.playerScore}
+                gameOver = {this.state.gameOver}/>
             </Grid.Column>
             </Grid>
             

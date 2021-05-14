@@ -49,7 +49,8 @@ export default class TestTable extends React.Component{
             message: null,
             playerStays: false,
             winLossMessage: "",
-            dealerOver: false
+            dealerOver: false,
+            gameOver: false
         })
     }
 
@@ -261,7 +262,8 @@ export default class TestTable extends React.Component{
 
                 <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
                 hitFunc = {this.hit} hitState = {this.state.hit1} dealerTurn = {this.state.dealerTurn}
-                stayFunction = {this.stay} message = {this.state.message} score = {this.state.playerScore}/>
+                stayFunction = {this.stay} message = {this.state.message} score = {this.state.playerScore}
+                gameOver = {this.state.gameOver}/>
                 <br></br>
                 <br></br>
                 <br></br>

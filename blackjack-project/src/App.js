@@ -60,7 +60,7 @@ stake250 = (wl) => {
       style={{ 
       backgroundImage: `url("https://media.istockphoto.com/vectors/poker-table-background-in-green-color-vector-id1206505233?k=6&m=1206505233&s=612x612&w=0&h=3yK8zXZmrh3-tRVtw0wY-AiTTwnqFf_mmNlIGAjlr4E=")`}}
       className="App"> 
-      <Header color = "red" as = 'h1' textAlign = "center">Your Balance: {this.state.userBalance}</Header>
+      <Header inverted color = "red"  as = 'h2' textAlign = "center">Your Balance: {this.state.userBalance}</Header>
       <Switch>
         <Route path = "/table50" >
           <TestTable bet= {this.stake50}/>

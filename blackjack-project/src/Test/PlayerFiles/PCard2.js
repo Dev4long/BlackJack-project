@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Grid, Icon, Image } from 'semantic-ui-react'
 
 
 export default class PCard2 extends React.Component{
@@ -8,9 +8,9 @@ export default class PCard2 extends React.Component{
         return (
             <div>   
                 
-                     <Image size = "small" src= {this.props.gameOn === false ? "http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg": 
-                    this.props.card2.image} />      
-            
+                     <Image rounded size = "small" src= {this.props.gameOn === false ? "http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg": 
+                    this.props.card2.image} />     
+                
             </div>
         )
     }

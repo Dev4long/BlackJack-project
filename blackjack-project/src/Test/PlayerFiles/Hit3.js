@@ -8,7 +8,7 @@ export default class Hit3 extends React.Component{
         return (
             <div>   
                 
-                     <Image size = 'small' src = {this.props.hitCard1.image} />      
+                     < Image rounded size = 'small' src = {this.props.hitCard1.image} />      
                 
             </div>
         )

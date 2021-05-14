@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Button, Header} from 'semantic-ui-react'
+import { Grid, Button, Header, Container} from 'semantic-ui-react'
 import PCard1 from './PCard1'
 import PCard2 from './PCard2'
 import Hit1 from './Hit1'
@@ -18,8 +18,8 @@ export default class Player extends React.Component {
 
             <Grid>
             <Grid.Column textAlign="center">
-            {this.props.dealerTurn === false ? <Button color = "blue" size = "large" round onClick = {() => this.props.hitFunc()}>Hit</Button> : null}
-            {this.props.dealerTurn === false? <Button onClick = {() => {this.props.stayFunction()}} color = "green" size = "large" round> Stay </Button> : null}
+            {this.props.dealerTurn === false && this.props.gameOver === false ? <Button color = "blue" size = "large" round onClick = {() => this.props.hitFunc()}>Hit</Button> : null}
+            {this.props.dealerTurn === false && this.props.gameOver === false? <Button onClick = {() => {this.props.stayFunction()}} color = "green" size = "large" round> Stay </Button> : null}
             
             
             
@@ -27,7 +27,9 @@ export default class Player extends React.Component {
             </Grid>
 
                 
-                <Header textAlign = "center" color = "red" as = "h1">{this.props.message}</Header>
+                <Header textAlign = "center" color = "yellow" as = "h1">{this.props.message}</Header>
+                
+                <Container textAlign='center'>
                 <Grid padded = "horizontally" inverted columns={2}>
                     
                         <PCard1 card1 = {this.props.playerHand[0]} gameOn = {this.props.gameOn} />
@@ -37,6 +39,7 @@ export default class Player extends React.Component {
                         {this.props.playerHand.length < 5 ? null: <Hit2 hitCard1 = {this.props.playerHand[4]}/>}
                         
                 </Grid>
+                </Container>
                 <br></br>
                 <br></br>
                

@@ -8,7 +8,7 @@ export default class Dhit2 extends React.Component{
         return (
             <div>   
                 
-                     <Image size = 'small' src = {this.props.hit2.image} />      
+                     <Image rounded size = 'small' src = {this.props.hit2.image} />      
                 
             </div>
         )
