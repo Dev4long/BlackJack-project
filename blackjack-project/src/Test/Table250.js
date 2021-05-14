@@ -246,7 +246,7 @@ export default class TestTable extends React.Component{
             <Grid>
             <Grid.Column textAlign="center" center>
                 <Header color = "orange" as = 'h1' textAlign = "center">BLACKJACK! Table 250</Header>
-                <Header color = "red" as = 'h3' textAlign = "center">{this.state.winLossMessage}</Header>
+                <Header color = "yellow" as = 'h2' textAlign = "center">{this.state.winLossMessage}</Header>
                 <Button size = "medium" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
                 <Button size = "medium" color ="orange" 
                     onClick = {() => this.newGame()} >New Game</Button>

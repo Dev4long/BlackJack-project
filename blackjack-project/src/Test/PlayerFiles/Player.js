@@ -13,7 +13,7 @@ export default class Player extends React.Component {
 
             <div> 
                 <br></br>
-                {this.props.dealerTurn === false? <Header textAlign = "center" color = "teal" as = 'h1'>Your Hand: {this.props.score}</Header> 
+                {this.props.dealerTurn === false? <Header textAlign = "center" color = "olive" as = 'h1'>Your Hand: {this.props.score}</Header> 
                 : <Header textAlign = "center" color = "red" as = 'h1'></Header>}
 
             <Grid>

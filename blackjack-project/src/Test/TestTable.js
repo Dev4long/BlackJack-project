@@ -245,22 +245,19 @@ export default class TestTable extends React.Component{
                     
             <Grid>
             <Grid.Column textAlign="center">
-            <Header color = "orange" as = 'h1' textAlign = "center">BLACKJACK! Table 50</Header>
-            <Header color = "red" as = 'h3' textAlign = "center">{this.state.winLossMessage}</Header>
-                    
-                    <Button size = "medium" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
-                    <Button size = "medium" color ="orange" 
-                    onClick = {() => this.newGame()} >New Game</Button>
+                <Header color = "orange" as = 'h1' textAlign = "center">BLACKJACK! Table 50</Header>
+                <Header color = "yellow" as = 'h2' textAlign = "center">{this.state.winLossMessage}</Header>
+                <Button size = "medium" color ="green" onClick = {() => this.gameOn()}>Deal</Button>
+                <Button size = "medium" color ="orange" onClick = {() => this.newGame()} >New Game</Button>
             </Grid.Column>
             </Grid>
-            
-                
-                <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand} 
+                    
+            <Dealer gameOn = {this.state.gameOn} dealerHand = {this.state.dealerHand} 
                 dealerTurn = {this.state.dealerTurn} dealerScore = {this.state.dealerScore} 
                 playerScore = {this.state.playerScore} hitCard1 = {this.state.hitCard1} 
                 dealerHit = {this.dealerHit} renderHit1 = {this.state.renderHit1}/> 
 
-                <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
+            <Player gameOn = {this.state.gameOn} playerHand = {this.state.playerHand} 
                 hitFunc = {this.hit} hitState = {this.state.hit1} dealerTurn = {this.state.dealerTurn}
                 stayFunction = {this.stay} message = {this.state.message} score = {this.state.playerScore}
                 gameOver = {this.state.gameOver}/>
